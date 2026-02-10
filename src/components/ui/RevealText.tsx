@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { LUXURY_EASE } from "@/lib/utils";
+import React from "react";
 
 interface RevealTextProps {
   text: string;
   className?: string;
   delay?: number;
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+  as?: React.ElementType;
 }
 
 export default function RevealText({
