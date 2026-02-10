@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import RevealText from "../components/ui/RevealText";
 import MagneticButton from "../components/ui/MagneticButton";
+import NanoBanana from "../components/NanoBanana";
 import { MoveUpRight } from "lucide-react";
 import { LUXURY_EASE } from "@/lib/utils";
 
@@ -52,6 +53,10 @@ export default function Work() {
                         className="text-5xl md:text-7xl font-bold tracking-tighter leading-none font-serif italic text-muted"
                         delay={0.15}
                     />
+                </div>
+
+                <div className="absolute top-32 right-12 hidden lg:block pointer-events-none -z-10 opacity-50">
+                    <NanoBanana variant="code" className="w-[400px] h-[400px]" />
                 </div>
 
                 {/* Project List */}

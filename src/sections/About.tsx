@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import RevealText from "../components/ui/RevealText";
+import NanoBanana from "../components/NanoBanana";
 import { LUXURY_EASE } from "@/lib/utils";
 
 export default function About() {
@@ -21,6 +22,9 @@ export default function About() {
                             className="text-4xl md:text-5xl font-bold tracking-tighter leading-none font-serif italic"
                             delay={0.1}
                         />
+                        <div className="mt-12 hidden md:block">
+                            <NanoBanana variant="strategy" className="w-full h-auto max-w-[250px] mx-auto opacity-90" />
+                        </div>
                     </div>
                 </div>
 
