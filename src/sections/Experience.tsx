@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import RevealText from "../components/ui/RevealText";
-import NanoBanana from "../components/NanoBanana";
 import { LUXURY_EASE } from "@/lib/utils";
 
 const roles = [
@@ -49,9 +48,6 @@ export default function Experience() {
                         className="text-5xl md:text-7xl font-bold tracking-tighter leading-none font-serif italic text-muted"
                         delay={0.15}
                     />
-                    <div className="mt-8 md:absolute md:right-12 md:top-24 opacity-80 pointer-events-none">
-                        <NanoBanana variant="growth" className="w-48 h-48 md:w-64 md:h-64" />
-                    </div>
                 </div>
 
                 <div className="space-y-20 md:space-y-24">
