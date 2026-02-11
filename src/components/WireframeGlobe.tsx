@@ -17,7 +17,7 @@ export default function WireframeGlobe() {
                 </defs>
 
                 {/* Outer Circle */}
-                <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+                <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
 
                 {/* Vertical Meridians */}
                 {[0, 45, 90, 135].map((angle, i) => (
@@ -30,7 +30,7 @@ export default function WireframeGlobe() {
                         stroke="currentColor"
                         strokeWidth="1"
                         fill="none"
-                        opacity="0.5"
+                        opacity="0.6"
                         transform={`rotate(${angle} 100 100)`}
                     />
                 ))}
@@ -45,7 +45,7 @@ export default function WireframeGlobe() {
                         stroke="currentColor"
                         strokeWidth="1"
                         fill="none"
-                        opacity="0.3"
+                        opacity="0.4"
                     />
                 ))}
 
@@ -58,7 +58,7 @@ export default function WireframeGlobe() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                     fill="none"
-                    opacity="0.8"
+                    opacity="0.9"
                     animate={{ rotate: -360 }}
                     transition={{ duration: 15, ease: "linear", repeat: Infinity }}
                 />
@@ -70,7 +70,7 @@ export default function WireframeGlobe() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                     fill="none"
-                    opacity="0.8"
+                    opacity="0.9"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 12, ease: "linear", repeat: Infinity }}
                 />

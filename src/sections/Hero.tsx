@@ -47,7 +47,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: LUXURY_EASE }}
-            className="mt-12 md:mt-16 w-full max-w-2xl flex flex-col items-start text-left"
+            className="mt-8 md:mt-10 w-full max-w-2xl flex flex-col items-start text-left"
           >
             {/* Subhead */}
             <h2 className="text-xl md:text-3xl font-light leading-snug mb-8 text-left">
@@ -61,7 +61,7 @@ export default function Hero() {
               </p>
 
               {/* Magnetic CTA */}
-              <div className="flex gap-6 items-center">
+              <div className="flex gap-6 items-center -ml-2">
                 <MagneticButton className="bg-fg text-bg px-10 py-5 rounded-full font-bold tracking-wide hover:scale-105 transition-transform duration-300">
                   Start a Conversation
                 </MagneticButton>
