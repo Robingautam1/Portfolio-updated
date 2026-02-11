@@ -13,6 +13,8 @@ const projects = [
         goal: "To prove engagement increases when finance becomes interactive.",
         color: "bg-card-edtech",
         accent: "text-emerald-600",
+        link: "https://cash-curious.vercel.app/",
+        image: "/cash-curious.png"
     },
     {
         title: "QuantMaster",
@@ -22,6 +24,8 @@ const projects = [
         goal: "Started as a personal tool, became a peer resource.",
         color: "bg-card-fintech",
         accent: "text-blue-600",
+        link: "https://robingautam1.github.io/quantmaster-site/",
+        image: "/quantmaster.png"
     },
     {
         title: "Finlatics",
@@ -31,12 +35,14 @@ const projects = [
         goal: "Clarity usually beats complexity.",
         color: "bg-card-analytics",
         accent: "text-purple-600",
+        link: "#",
+        image: null // No live link provided, keeping placeholder style if needed or just color
     },
 ];
 
 export default function Work() {
     return (
-        <section className="py-32 px-6 md:px-12 bg-bg section-transition">
+        <section className="py-32 px-6 md:px-12 bg-bg section-transition" id="works">
             <div className="max-w-[1400px] mx-auto">
 
                 {/* Header */}
@@ -54,8 +60,6 @@ export default function Work() {
                     />
                 </div>
 
-                {/* VISUAL: NanoBanana Removed */}
-
                 {/* Project List */}
                 <div className="space-y-32">
                     {projects.map((p, i) => (
@@ -68,15 +72,39 @@ export default function Work() {
                             className="group grid grid-cols-1 md:grid-cols-12 gap-12"
                         >
                             {/* Visual Card (Left) */}
-                            <div className={`md:col-span-7 h-[400px] md:h-[500px] rounded-3xl ${p.color} relative overflow-hidden transition-transform duration-700 group-hover:scale-[1.02]`}>
-                                <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                                    {/* Abstract Shapes as placeholders for now */}
-                                    <div className={`w-64 h-64 rounded-full blur-3xl ${p.accent.replace('text', 'bg')}/40`} />
-                                </div>
-                                <div className="absolute bottom-8 left-8">
-                                    <span className={`label-swiss bg-white/80 px-3 py-1 rounded-full backdrop-blur-sm ${p.accent}`}>{p.title}</span>
-                                </div>
-                            </div>
+                            <a
+                                href={p.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`md:col-span-7 h-[400px] md:h-[500px] rounded-3xl ${p.color} relative overflow-hidden transition-transform duration-700 group-hover:scale-[1.02] block cursor-pointer border border-black/5`}
+                            >
+                                {p.image ? (
+                                    <div className="absolute inset-0 w-full h-full">
+                                        {/* Browser Bar for realism */}
+                                        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[90%] h-8 bg-white/50 backdrop-blur-md rounded-full flex items-center px-4 gap-2 z-20 border border-white/20 shadow-sm">
+                                            <div className="w-2 h-2 rounded-full bg-red-400" />
+                                            <div className="w-2 h-2 rounded-full bg-yellow-400" />
+                                            <div className="w-2 h-2 rounded-full bg-green-400" />
+                                            <div className="ml-2 text-[10px] text-muted opacity-60 font-mono truncate w-full text-center">{p.link}</div>
+                                        </div>
+
+                                        <img
+                                            src={p.image}
+                                            alt={p.title}
+                                            className="absolute top-20 left-[5%] w-[90%] h-auto rounded-t-lg shadow-2xl transition-transform duration-700 group-hover:-translate-y-2"
+                                        />
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 flex items-center justify-center opacity-30">
+                                            <div className={`w-64 h-64 rounded-full blur-3xl ${p.accent.replace('text', 'bg')}/40`} />
+                                        </div>
+                                        <div className="absolute bottom-8 left-8">
+                                            <span className={`label-swiss bg-white/80 px-3 py-1 rounded-full backdrop-blur-sm ${p.accent}`}>{p.title}</span>
+                                        </div>
+                                    </>
+                                )}
+                            </a>
 
                             {/* Content (Right) */}
                             <div className="md:col-span-5 flex flex-col justify-center">
@@ -98,8 +126,11 @@ export default function Work() {
                                     "{p.goal}"
                                 </p>
 
-                                <MagneticButton className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b border-fg/20 pb-1 hover:border-fg transition-colors self-start">
-                                    View Case Study <MoveUpRight className="w-4 h-4" />
+                                <MagneticButton
+                                    href={p.link}
+                                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b border-fg/20 pb-1 hover:border-fg transition-colors self-start"
+                                >
+                                    View Project <MoveUpRight className="w-4 h-4" />
                                 </MagneticButton>
                             </div>
                         </motion.div>
