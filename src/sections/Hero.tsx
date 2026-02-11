@@ -61,7 +61,7 @@ export default function Hero() {
               </p>
 
               {/* Magnetic CTA */}
-              <div className="flex gap-6 items-center">
+              <div className="flex gap-6 items-center pl-1">
                 <MagneticButton className="bg-fg text-bg px-10 py-5 rounded-full font-bold tracking-wide hover:scale-105 transition-transform duration-300">
                   Start a Conversation
                 </MagneticButton>
@@ -95,7 +95,7 @@ export default function Hero() {
       </div>
 
       {/* Visual Layer - Wireframe Globe (Subtle, Background) */}
-      <div className="absolute top-[15%] right-[-10%] md:right-[5%] w-[50vw] md:w-[35vw] max-w-[500px] pointer-events-none opacity-20 text-fg mix-blend-multiply">
+      <div className="absolute top-[15%] right-[-10%] md:right-[5%] w-[50vw] md:w-[35vw] max-w-[500px] pointer-events-none opacity-40 text-fg bg-bg rounded-full">
         <WireframeGlobe />
       </div>
     </section>
