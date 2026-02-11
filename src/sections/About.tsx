@@ -37,7 +37,7 @@ export default function About() {
                     >
                         <p className="mb-8">
                             Most professionals fall into one of two buckets.
-                            They either sit on the strategy side—making decks and models—or they sit on the execution side, building the product.
+                            They either sit on the strategy side—making decks and models—or on the execution side, building the product.
                         </p>
                         <p className="font-medium text-fg">
                             The real friction usually sits in the middle.
@@ -45,15 +45,14 @@ export default function About() {
                     </motion.div>
 
                     <div className="bg-white p-8 md:p-12 rounded-2xl border border-fg/5 shadow-sm">
-                        <h3 className="label-swiss mb-6 text-accent">The Gap</h3>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <h4 className="text-xl font-bold mb-2">Strategy Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Imagine things they can't build. Stuck in theory and decks.</p>
+                                <p className="text-muted text-sm leading-relaxed">Imagine things they can’t build. Stuck in theory and decks.</p>
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold mb-2">Product Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Build things that don't move the business. Stuck in tickets and features.</p>
+                                <p className="text-muted text-sm leading-relaxed">Build things that don’t move the business. Stuck in tickets and features.</p>
                             </div>
                         </div>
                     </div>
@@ -66,10 +65,10 @@ export default function About() {
                         className="text-base md:text-lg text-muted space-y-6 leading-relaxed"
                     >
                         <p>
-                            I’m currently pursuing my MBA at IIM Rohtak... At the same time, I’ve spent years building products, financial tools, and automation systems.
+                            I’m currently pursuing my MBA at IIM Rohtak. At the same time, I’ve spent years building products, financial tools, and automation systems.
                         </p>
                         <p>
-                            Not to become a “developer” in the traditional sense, but to remove the gap between idea and execution.
+                            Not to become a traditional developer, but to remove the friction between idea and execution.
                         </p>
 
                         <ul className="space-y-4 mt-8 border-l-2 border-accent pl-6 py-2">
@@ -88,7 +87,7 @@ export default function About() {
                         </ul>
 
                         <p className="text-xl font-bold text-fg pt-8">
-                            Build systems that actually move outcomes.
+                            My focus is simple: build systems that move outcomes.
                         </p>
                     </motion.div>
 
