@@ -6,10 +6,10 @@ import { LUXURY_EASE } from "@/lib/utils";
 
 export default function Hero() {
   const stats = [
-    { label: "Students Onboarded", value: "1,200+" },
-    { label: "Financial Tools", value: "25+" },
-    { label: "Largest Event", value: "Riwaaz 2.0" },
-    { label: "Multi-City Impact", value: "CorStone" },
+    { label: "Students onboarded during StockGro internship", value: "1,200+" },
+    { label: "Financial tools built and deployed", value: "25+" },
+    { label: "Led Riwaaz 2.0 as E-Cell President", value: "Largest Institutional Event" },
+    { label: "For E-Cell and campus societies", value: "Brand Partnerships Secured" },
   ];
 
   return (
@@ -50,23 +50,28 @@ export default function Hero() {
             className="mt-8 md:mt-10 w-full max-w-2xl flex flex-col items-start text-left"
           >
             {/* Subhead */}
-            <h2 className="text-xl md:text-3xl font-light leading-snug mb-8 text-left">
+            <h2 className="text-xl md:text-3xl font-light leading-snug mb-4 text-left">
               Built from strategy, executed in code.
             </h2>
 
+            {/* Positioning Anchor */}
+            <p className="text-base font-medium tracking-wide text-fg/80 mb-8">
+              Interested in product, growth, and system-driven roles.
+            </p>
+
             <div className="flex flex-col items-start space-y-8">
-              <p className="text-base md:text-lg text-muted max-w-md leading-relaxed text-left">
-                I turn ideas into systems and people into teams.<br />
-                MBA @ IIM Rohtak • Ecosystem Builder
+              <p className="text-base md:text-lg text-muted max-w-xl leading-relaxed text-left">
+                MBA at IIM Rohtak.<br />
+                I build financial tools, growth systems, and student ecosystems that actually scale.
               </p>
 
               {/* Magnetic CTA */}
               <div className="flex gap-6 items-center -ml-2">
                 <MagneticButton className="bg-fg text-bg px-10 py-5 rounded-full font-bold tracking-wide hover:scale-105 transition-transform duration-300">
-                  Start a Conversation
+                  Let’s Build Something
                 </MagneticButton>
                 <button className="text-sm font-medium underline underline-offset-4 decoration-muted hover:decoration-fg transition-all">
-                  View Selected Work
+                  See Selected Work
                 </button>
               </div>
             </div>
