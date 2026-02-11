@@ -55,13 +55,15 @@ export default function Hero() {
             </h2>
 
             <div className="flex flex-col items-start space-y-8">
-              <div className="text-base md:text-lg text-muted max-w-xl leading-relaxed text-left space-y-4">
+              <div className="text-base md:text-lg text-muted max-w-xl leading-relaxed text-left space-y-1">
                 <p>
-                  MBA at IIM Rohtak.<br />
-                  I build financial tools, growth systems, and student ecosystems that actually scale.
+                  MBA at IIM Rohtak.
                 </p>
-                <p className="font-medium text-fg/80">
-                  Interested in product, growth, and system-driven roles.
+                <p>
+                  I build financial tools, growth systems, and student ecosystems.
+                </p>
+                <p className="font-medium text-fg/80 pt-2">
+                  Focused on product, growth, and system-driven roles.
                 </p>
               </div>
 
