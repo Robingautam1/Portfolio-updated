@@ -1,68 +1,82 @@
 import { motion } from "framer-motion";
 import MagneticButton from "../components/ui/MagneticButton";
-import RevealText from "../components/ui/RevealText";
 import { LUXURY_EASE } from "@/lib/utils";
+
+const links = [
+    { label: "LinkedIn", href: "https://linkedin.com/in/robingautam", external: true },
+    { label: "Resume", href: "#", external: false },
+    { label: "robingautam.in", href: "https://robingautam.in", external: true },
+];
 
 export default function CTA() {
     return (
-        <footer className="relative overflow-hidden" style={{ backgroundColor: "#1a1a1a" }}>
+        <footer className="bg-fg text-bg">
 
-            <section className="pt-24 md:pt-32 pb-12 px-6 md:px-12">
-                <div className="max-w-[1400px] mx-auto w-full z-10 relative">
+            {/* Main CTA Area */}
+            <section className="pt-24 md:pt-32 pb-16 px-6 md:px-12 border-t border-bg/10">
+                <div className="max-w-[1400px] mx-auto">
 
-                    {/* Headline */}
-                    <div className="max-w-7xl mb-16 md:mb-24">
-                        <RevealText
-                            text="Got a Problem"
-                            className="text-[11vw] md:text-[7rem] font-bold tracking-tighter leading-[0.85] text-white"
-                            delay={0}
-                        />
-                        <RevealText
-                            text="Worth Solving?"
-                            className="text-[11vw] md:text-[7rem] font-bold tracking-tighter leading-[0.85] font-serif italic text-white/40"
-                            delay={0.15}
-                        />
-                    </div>
+                    {/* Two-column: Headline left, Links right */}
+                    <div className="grid md:grid-cols-12 gap-16 md:gap-8 mb-20">
 
-                    {/* Body */}
-                    <div className="grid md:grid-cols-12 gap-12 items-end">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, ease: LUXURY_EASE, delay: 0.3 }}
-                            className="md:col-span-8"
-                        >
-                            <p className="text-lg md:text-xl font-light leading-relaxed max-w-xl mb-12" style={{ color: "#9ca3af" }}>
-                                I work with founders and teams who need strategy that ships. If that's you — let's talk.
-                            </p>
+                        {/* Left: Heading */}
+                        <div className="md:col-span-8">
+                            <span className="label-swiss text-bg/40 block mb-8">Contact</span>
+                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] mb-2">
+                                Got a Problem
+                            </h2>
+                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] font-serif italic text-accent">
+                                Worth Solving?
+                            </h2>
+                        </div>
 
-                            <MagneticButton
-                                href="mailto:robingautam@outlook.com"
-                                className="inline-block px-12 py-6 rounded-full text-lg font-bold uppercase tracking-widest bg-white text-black border-2 border-white hover:bg-transparent hover:text-white transition-colors duration-300"
-                            >
-                                Start a Conversation
-                            </MagneticButton>
-                        </motion.div>
-
-                        {/* Footer Links */}
-                        <div className="md:col-span-4 flex flex-col md:items-end gap-4 md:gap-6">
-                            <a href="https://linkedin.com/in/robingautam" target="_blank" rel="noopener noreferrer" className="text-2xl font-serif italic text-white hover:underline decoration-2 underline-offset-4">LinkedIn</a>
-                            <a href="#" className="text-2xl font-serif italic text-white hover:underline decoration-2 underline-offset-4">Resume</a>
-                            <a href="https://robingautam.in" target="_blank" rel="noopener noreferrer" className="text-2xl font-serif italic text-white/60 hover:text-white hover:underline decoration-2 underline-offset-4 transition-colors">robingautam.in ↗</a>
+                        {/* Right: Links stacked */}
+                        <div className="md:col-span-4 flex flex-col md:items-end md:justify-end gap-4">
+                            {links.map((link, i) => (
+                                <a
+                                    key={i}
+                                    href={link.href}
+                                    target={link.external ? "_blank" : undefined}
+                                    rel={link.external ? "noopener noreferrer" : undefined}
+                                    className="text-2xl font-serif italic text-bg/80 hover:text-bg hover:underline decoration-1 underline-offset-4 transition-colors"
+                                >
+                                    {link.label}{link.external ? " ↗" : ""}
+                                </a>
+                            ))}
                         </div>
                     </div>
 
-                </div>
+                    {/* Body + CTA */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: LUXURY_EASE }}
+                    >
+                        <p className="text-lg md:text-xl font-light leading-relaxed text-bg/50 max-w-xl mb-10">
+                            I work with founders and teams who need strategy that ships. If that's you — let's talk.
+                        </p>
 
-                {/* Bottom Bar */}
-                <div className="max-w-[1400px] mx-auto pt-16 md:pt-24 mt-16 flex flex-col md:flex-row justify-between items-center border-t border-white/10 z-10 relative gap-4">
-                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold" style={{ color: "#6b7280" }}>Based in India. Working globally.</span>
-                    <span className="text-[10px] tracking-[0.15em]" style={{ color: "#6b7280" }}>robin@robingautam.in</span>
-                    <span className="text-[10px] tracking-[0.2em] uppercase" style={{ color: "#6b7280" }}>© {new Date().getFullYear()} Robin Gautam</span>
-                </div>
+                        <MagneticButton
+                            href="mailto:robingautam@outlook.com"
+                            className="inline-block px-12 py-5 rounded-full text-sm font-bold uppercase tracking-[0.2em] bg-bg text-fg hover:bg-accent hover:text-fg transition-colors duration-300"
+                        >
+                            Start a Conversation
+                        </MagneticButton>
+                    </motion.div>
 
+                </div>
             </section>
+
+            {/* Bottom Bar — same style as toolkit grid lines */}
+            <div className="px-6 md:px-12 border-t border-bg/10">
+                <div className="max-w-[1400px] mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-bg/30">Based in India. Working globally.</span>
+                    <span className="text-[10px] tracking-[0.15em] text-bg/30 font-mono">robin@robingautam.in</span>
+                    <span className="text-[10px] tracking-[0.2em] uppercase text-bg/30">© {new Date().getFullYear()} Robin Gautam</span>
+                </div>
+            </div>
+
         </footer>
     );
 }
