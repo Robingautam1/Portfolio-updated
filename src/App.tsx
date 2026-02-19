@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Work from "./sections/Work";
+import Venture from "./sections/Venture";
 import Skills from "./sections/Skills";
 import Services from "./sections/Services";
 import Philosophy from "./sections/Philosophy";
@@ -39,13 +40,10 @@ function App() {
       <About />
       <Experience />
       <Work />
+      <Venture />
       <Skills />
       <Services />
       <Philosophy />
-      {/* Ticker was optional in new plan, keeping it minimal or omitting if not in new copy list. Copy list didn't mention Ticker explicitly, but plan did initially. 
-          Given strict adherence to copy provided, I am skipping Ticker unless user asked for it. 
-          The user provided exact section list: Hero, About, Experience, Work, Skills, Services, Philosophy, CTA. 
-          So Ticker is omitted. */}
       <CTA />
     </main>
   );

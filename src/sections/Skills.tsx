@@ -65,8 +65,11 @@ export default function Skills() {
                 </div>
 
                 <div className="mt-24 text-center">
-                    <p className="text-lg font-serif italic opacity-60">
-                        The goal is always the same: reduce friction between idea and execution.
+                    <p className="text-xl md:text-2xl font-serif italic opacity-70 max-w-2xl mx-auto leading-relaxed">
+                        "The goal is always the same: reduce friction between idea and execution."
+                    </p>
+                    <p className="mt-4 text-sm font-bold tracking-widest uppercase opacity-40">
+                        — Robin Gautam
                     </p>
                 </div>
 

@@ -21,7 +21,6 @@ export default function About() {
                             className="text-4xl md:text-5xl font-bold tracking-tighter leading-none font-serif italic"
                             delay={0.1}
                         />
-                        {/* NanoBanana Removed */}
                     </div>
                 </div>
 
@@ -44,15 +43,16 @@ export default function About() {
                         </p>
                     </motion.div>
 
+                    {/* Strategy vs Product Card — KEEP AS-IS */}
                     <div className="bg-white p-8 md:p-12 rounded-2xl border border-fg/5 shadow-sm">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <h4 className="text-xl font-bold mb-2">Strategy Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Imagine things they can’t build. Stuck in theory and decks.</p>
+                                <p className="text-muted text-sm leading-relaxed">Imagine things they can't build. Stuck in theory and decks.</p>
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold mb-2">Product Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Build things that don’t move the business. Stuck in tickets and features.</p>
+                                <p className="text-muted text-sm leading-relaxed">Build things that don't move the business. Stuck in tickets and features.</p>
                             </div>
                         </div>
                     </div>
@@ -65,26 +65,22 @@ export default function About() {
                         className="text-base md:text-lg text-muted space-y-6 leading-relaxed"
                     >
                         <p>
-                            I’m currently pursuing my MBA at IIM Rohtak. At the same time, I’ve spent years building products, financial tools, and automation systems.
+                            I'm currently pursuing my MBA at IIM Rohtak. At the same time, I've spent years building products, financial tools, and automation systems.
                         </p>
+
+                        {/* IIM Rohtak Credential Badge */}
+                        <span className="inline-block bg-fg text-bg text-[10px] tracking-[0.2em] uppercase font-bold px-4 py-2 rounded-full">
+                            IIM Rohtak · MBA 2025–27
+                        </span>
+
                         <p>
                             Not to become a traditional developer, but to remove the friction between idea and execution.
                         </p>
 
-                        <ul className="space-y-4 mt-8 border-l-2 border-accent pl-6 py-2">
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent font-bold mt-1">01.</span>
-                                <span>I can read a balance sheet and build the calculator behind it.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent font-bold mt-1">02.</span>
-                                <span>I can pitch a strategy and prototype the product the same week.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent font-bold mt-1">03.</span>
-                                <span>I can manage a team and design the systems that make it faster.</span>
-                            </li>
-                        </ul>
+                        {/* Flowing paragraph — replaces numbered list */}
+                        <p className="text-base md:text-lg text-fg leading-relaxed font-medium">
+                            I can read a balance sheet and build the calculator behind it. I can pitch a strategy on Monday and prototype the product by Friday. And I can design the systems that make a team faster — not just describe them in a slide.
+                        </p>
 
                         <p className="text-xl font-bold text-fg pt-8">
                             My focus is simple: build systems that move outcomes.

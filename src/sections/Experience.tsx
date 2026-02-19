@@ -4,22 +4,28 @@ import { LUXURY_EASE } from "@/lib/utils";
 
 const roles = [
     {
+        title: "MBA Student",
+        org: "IIM Rohtak",
+        year: "CURRENT",
+        problem: "Most MBA students focus only on theory or only on campus activities.",
+        solution: "Building real products and client systems in parallel with academic work.",
+        outcome: "3 shipped products. 1 active startup. Ongoing.",
+    },
+    {
         title: "President — E-Cell",
         org: "DSEU Dwarka",
         year: "2023-25",
         problem: "Society ran events but lacked visibility and pipelines.",
         solution: "Built brand partnerships. Focused on structure over noise.",
         outcome: "Riwaaz 2.0 (Largest event), secured multiple sponsors.",
-        lesson: "Systems and partnerships compound faster.",
     },
     {
-        title: "Campus Intern",
+        title: "Growth & Partnerships",
         org: "StockGro",
         year: "Internship",
         problem: "Campus ecosystem saturated with ambassador programs.",
         solution: "Focused on institutional trust & MoUs, not just downloads.",
         outcome: "1,200+ students onboarded. Active engagement.",
-        lesson: "Growth is about positioning, not noise.",
     },
     {
         title: "Content Lead Intern",
@@ -28,7 +34,6 @@ const roles = [
         problem: "Translating emotional, local stories into professional reports.",
         solution: "Structured storytelling framework.",
         outcome: "Unified content strategy for stakeholders.",
-        lesson: "Communication shapes perceived impact.",
     },
 ];
 
@@ -62,12 +67,12 @@ export default function Experience() {
                         >
                             {/* Left: Role Info */}
                             <div className="md:col-span-4 lg:col-span-3">
-                                <span className="label-swiss block mb-2 opacity-50">{role.year}</span>
+                                <span className={`label-swiss block mb-2 ${role.year === 'CURRENT' ? 'text-accent font-bold' : 'opacity-50'}`}>{role.year}</span>
                                 <h3 className="text-2xl font-bold leading-tight mb-2">{role.title}</h3>
                                 <p className="text-lg text-muted font-serif italic">{role.org}</p>
                             </div>
 
-                            {/* Right: Problem/Solution/Lesson */}
+                            {/* Right: Problem/Solution/Outcome */}
                             <div className="md:col-span-8 lg:col-span-7 lg:col-start-5 space-y-10">
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div>
@@ -83,9 +88,6 @@ export default function Experience() {
                                 <div>
                                     <h4 className="label-swiss text-fg mb-3">Outcome</h4>
                                     <p className="text-xl md:text-4xl font-bold leading-tight">{role.outcome}</p>
-                                    <p className="mt-6 text-sm font-mono text-muted border-l border-accent pl-4 py-1 italic">
-                                        "{role.lesson}"
-                                    </p>
                                 </div>
                             </div>
                         </motion.div>
