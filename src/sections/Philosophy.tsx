@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import RevealText from "../components/ui/RevealText";
 import { LUXURY_EASE } from "@/lib/utils";
 
 const systemCards = [
