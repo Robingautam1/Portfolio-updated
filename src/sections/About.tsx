@@ -12,79 +12,55 @@ export default function About() {
                     <div className="md:sticky md:top-32">
                         <span className="label-swiss block mb-6">About</span>
                         <RevealText
-                            text="The Hybrid"
-                            className="text-4xl md:text-5xl font-bold tracking-tighter leading-none"
+                            text="Background &"
+                            className="text-3xl md:text-4xl font-bold tracking-tighter leading-none"
                             delay={0}
                         />
                         <RevealText
-                            text="Advantage"
-                            className="text-4xl md:text-5xl font-bold tracking-tighter leading-none font-serif italic"
+                            text="What I'm Looking For."
+                            className="text-3xl md:text-4xl font-bold tracking-tighter leading-none font-serif italic"
                             delay={0.1}
                         />
                     </div>
                 </div>
 
                 {/* Right Column: Narrative */}
-                <div className="md:col-span-8 lg:col-span-7 lg:col-start-5 space-y-12">
+                <div className="md:col-span-8 lg:col-span-7 lg:col-start-5 space-y-8">
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: LUXURY_EASE }}
-                        className="text-lg md:text-2xl font-light leading-relaxed"
-                    >
-                        <p className="mb-8">
-                            Most professionals fall into one of two buckets.
-                            They either sit on the strategy side—making decks and models—or on the execution side, building the product.
-                        </p>
-                        <p className="font-medium text-fg">
-                            The real friction usually sits in the middle.
-                        </p>
-                    </motion.div>
-
-                    {/* Strategy vs Product Card — KEEP AS-IS */}
-                    <div className="bg-white p-8 md:p-12 rounded-2xl border border-fg/5 shadow-sm">
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div>
-                                <h4 className="text-xl font-bold mb-2">Strategy Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Imagine things they can't build. Stuck in theory and decks.</p>
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-bold mb-2">Product Teams</h4>
-                                <p className="text-muted text-sm leading-relaxed">Build things that don't move the business. Stuck in tickets and features.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, ease: LUXURY_EASE, delay: 0.2 }}
                         className="text-base md:text-lg text-muted space-y-6 leading-relaxed"
                     >
                         <p>
-                            I'm currently pursuing my MBA at IIM Rohtak. At the same time, I've spent years building products, financial tools, and automation systems.
+                            I did my BBA in Banking, Financial Services & Insurance from DSEU, where I led the Entrepreneurship Cell, coordinated placements for 2,000+ students, and got interested in how organizations actually get things done — not just how they plan to.
                         </p>
 
-                        {/* IIM Rohtak Credential Badge */}
+                        <p>
+                            During that time I also started building things on the side — financial literacy tools, research projects, a few automation workflows. Not because I was trying to become a developer, but because I wanted to understand what was actually hard about execution.
+                        </p>
+
+                        <p>
+                            I'm now pursuing my MBA at IIM Rohtak. I'm actively looking for roles in product management, growth, strategy, or consulting — places where analytical thinking and getting things done both matter.
+                        </p>
+                    </motion.div>
+
+                    {/* Credential Badges */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: LUXURY_EASE, delay: 0.2 }}
+                        className="flex flex-wrap gap-3"
+                    >
                         <span className="inline-block bg-fg text-bg text-[10px] tracking-[0.2em] uppercase font-bold px-4 py-2 rounded-full">
                             IIM Rohtak · MBA 2025–27
                         </span>
-
-                        <p>
-                            Not to become a traditional developer, but to remove the friction between idea and execution.
-                        </p>
-
-                        {/* Flowing paragraph — replaces numbered list */}
-                        <p className="text-base md:text-lg text-fg leading-relaxed font-medium">
-                            I can read a balance sheet and build the calculator behind it. I can pitch a strategy on Monday and prototype the product by Friday. And I can design the systems that make a team faster — not just describe them in a slide.
-                        </p>
-
-                        <p className="text-xl font-bold text-fg pt-8">
-                            My focus is simple: build systems that move outcomes.
-                        </p>
+                        <span className="inline-block bg-fg/10 text-fg text-[10px] tracking-[0.2em] uppercase font-bold px-4 py-2 rounded-full border border-fg/10">
+                            BBA (BFSI) · DSEU · 77%
+                        </span>
                     </motion.div>
 
                 </div>

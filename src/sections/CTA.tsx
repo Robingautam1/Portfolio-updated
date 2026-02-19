@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import MagneticButton from "../components/ui/MagneticButton";
+import RevealText from "../components/ui/RevealText";
 import { LUXURY_EASE } from "@/lib/utils";
 
 const links = [
@@ -22,12 +23,16 @@ export default function CTA() {
                         {/* Left: Heading */}
                         <div className="md:col-span-8">
                             <span className="label-swiss text-bg/40 block mb-8">Contact</span>
-                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] mb-2">
-                                Got a Problem
-                            </h2>
-                            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] font-serif italic text-accent">
-                                Worth Solving?
-                            </h2>
+                            <RevealText
+                                text="Open to"
+                                className="text-4xl md:text-6xl font-bold tracking-tighter leading-[0.85] text-bg"
+                                delay={0}
+                            />
+                            <RevealText
+                                text="the Right Opportunity."
+                                className="text-4xl md:text-6xl tracking-tighter leading-[0.85] font-serif italic text-accent"
+                                delay={0.15}
+                            />
                         </div>
 
                         {/* Right: Links stacked */}
@@ -54,21 +59,21 @@ export default function CTA() {
                         transition={{ duration: 1, ease: LUXURY_EASE }}
                     >
                         <p className="text-lg md:text-xl font-light leading-relaxed text-bg/50 max-w-xl mb-10">
-                            I work with founders and teams who need strategy that ships. If that's you — let's talk.
+                            I'm actively looking for internships and full-time roles in product, growth, strategy, or consulting. If you're hiring or know someone who is — I'd love to connect.
                         </p>
 
                         <MagneticButton
                             href="mailto:robingautam@outlook.com"
                             className="inline-block px-12 py-5 rounded-full text-sm font-bold uppercase tracking-[0.2em] bg-bg text-fg hover:bg-accent hover:text-fg transition-colors duration-300"
                         >
-                            Start a Conversation
+                            Get in Touch
                         </MagneticButton>
                     </motion.div>
 
                 </div>
             </section>
 
-            {/* Bottom Bar — same style as toolkit grid lines */}
+            {/* Bottom Bar */}
             <div className="px-6 md:px-12 border-t border-bg/10">
                 <div className="max-w-[1400px] mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-bg/30">Based in India. Working globally.</span>

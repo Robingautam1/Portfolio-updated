@@ -7,8 +7,6 @@ import Experience from "./sections/Experience";
 import Work from "./sections/Work";
 import Venture from "./sections/Venture";
 import Skills from "./sections/Skills";
-import Services from "./sections/Services";
-import Philosophy from "./sections/Philosophy";
 import CTA from "./sections/CTA";
 
 function App() {
@@ -42,8 +40,6 @@ function App() {
       <Work />
       <Venture />
       <Skills />
-      <Services />
-      <Philosophy />
       <CTA />
     </main>
   );

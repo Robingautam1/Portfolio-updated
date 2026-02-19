@@ -7,6 +7,7 @@ import { LUXURY_EASE } from "@/lib/utils";
 const projects = [
     {
         title: "CashCurious",
+        context: "Personal project · Built independently",
         tagline: "Gamified financial literacy platform",
         desc: "Financial education is important, but boring. Traditional formats rely on long explanations. CashCurious makes learning finance feel like a game.",
         features: ["Interactive compounding simulations", "Bite-sized modules", "Zero-friction onboarding"],
@@ -19,6 +20,7 @@ const projects = [
     },
     {
         title: "QuantMaster",
+        context: "Personal project · Peer resource",
         tagline: "25+ financial calculators for students",
         desc: "Students spent more time fighting calculators than understanding concepts. QuantMaster is a suite of finance-specific tools.",
         features: ["25+ calculators (NPV, IRR)", "Context-aware interfaces", "Finance-specific inputs"],
@@ -31,6 +33,7 @@ const projects = [
     },
     {
         title: "Finlatics",
+        context: "Live project via Finlatics program",
         tagline: "Market research & segmentation",
         desc: "Client operated in a crowded market with unclear positioning. Focused on user segmentation and STP analysis to find a defensible niche.",
         features: ["Structured STP analysis", "Financial behavior segmentation", "Data-driven positioning"],
@@ -45,26 +48,26 @@ const projects = [
 
 export default function Work() {
     return (
-        <section className="py-32 px-6 md:px-12 bg-bg section-transition" id="works">
+        <section className="py-24 md:py-32 px-6 md:px-12 bg-bg section-transition" id="works">
             <div className="max-w-[1400px] mx-auto">
 
                 {/* Header */}
-                <div className="mb-24 md:mb-32 max-w-4xl">
-                    <span className="label-swiss block mb-6">Selected Work</span>
+                <div className="mb-20 md:mb-28 max-w-4xl">
+                    <span className="label-swiss block mb-6">Personal Projects</span>
                     <RevealText
-                        text="Projects Built to"
-                        className="text-5xl md:text-7xl font-bold tracking-tighter leading-none"
+                        text="Things I Built"
+                        className="text-4xl md:text-6xl font-bold tracking-tighter leading-none"
                         delay={0}
                     />
                     <RevealText
-                        text="Solve Real Problems."
-                        className="text-5xl md:text-7xl font-bold tracking-tighter leading-none font-serif italic text-muted"
+                        text="on the Side."
+                        className="text-4xl md:text-6xl font-bold tracking-tighter leading-none font-serif italic text-muted"
                         delay={0.15}
                     />
                 </div>
 
                 {/* Project List */}
-                <div className="space-y-32">
+                <div className="space-y-28">
                     {projects.map((p, i) => (
                         <motion.div
                             key={i}
@@ -102,17 +105,12 @@ export default function Work() {
                                         className="w-full h-full rounded-3xl flex flex-col items-center justify-center p-8 md:p-12 relative overflow-hidden"
                                         style={{ backgroundColor: "#1a1a2e" }}
                                     >
-                                        {/* Top label */}
                                         <p className="text-[10px] tracking-[0.25em] uppercase mb-8" style={{ color: "#a78bfa" }}>
                                             Market Research · STP Analysis
                                         </p>
-
-                                        {/* Large title */}
                                         <h3 className="text-5xl md:text-6xl font-serif italic font-normal text-white mb-10">
                                             Finlatics
                                         </h3>
-
-                                        {/* Data rows */}
                                         <div className="w-full max-w-xs space-y-3">
                                             <div className="flex items-end justify-between gap-2">
                                                 <span className="text-xs shrink-0" style={{ color: "#9ca3af" }}>Segment Identified</span>
@@ -130,8 +128,6 @@ export default function Work() {
                                                 <span className="text-xs font-mono text-white shrink-0">D2C + Referral</span>
                                             </div>
                                         </div>
-
-                                        {/* Bottom pill */}
                                         <div className="mt-10">
                                             <span
                                                 className="text-[10px] tracking-[0.15em] uppercase px-4 py-2 rounded-full border"
@@ -146,12 +142,13 @@ export default function Work() {
 
                             {/* Content (Right) */}
                             <div className="md:col-span-5 flex flex-col justify-center">
-                                <h3 className="text-3xl font-bold mb-2">{p.title}</h3>
-                                <p className="text-lg font-serif italic text-muted mb-6">{p.tagline}</p>
+                                <h3 className="text-2xl font-bold mb-1">{p.title}</h3>
+                                <p className="text-xs font-serif italic text-muted/60 mb-4">{p.context}</p>
+                                <p className="text-base font-serif italic text-muted mb-6">{p.tagline}</p>
 
-                                <p className="text-lg leading-relaxed mb-8">{p.desc}</p>
+                                <p className="text-base leading-relaxed mb-8">{p.desc}</p>
 
-                                <ul className="space-y-3 mb-8">
+                                <ul className="space-y-3 mb-6">
                                     {p.features.map((f, j) => (
                                         <li key={j} className="flex items-center gap-2 text-sm text-muted">
                                             <div className={`w-1.5 h-1.5 rounded-full ${p.accent.replace('text', 'bg')}`} />
@@ -178,6 +175,6 @@ export default function Work() {
                 </div>
 
             </div>
-        </section >
+        </section>
     );
 }

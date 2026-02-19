@@ -5,10 +5,10 @@ import { LUXURY_EASE } from "@/lib/utils";
 
 export default function Hero() {
   const stats = [
-    { label: "Students onboarded during StockGro internship", value: "1,200+" },
-    { label: "Financial tools built and deployed", value: "25+" },
-    { label: "Brand sponsors secured for Riwaaz 2.0", value: "3+" },
-    { label: "Years building products & systems", value: "2+" },
+    { label: "Students and professionals reached across campus initiatives", value: "2,200+" },
+    { label: "Financial tools and calculators built as personal projects", value: "25+" },
+    { label: "Program documents consolidated during Udyogini internship", value: "50+" },
+    { label: "Brand partnerships built as E-Cell President, DSEU", value: "6+" },
   ];
 
   return (
@@ -32,13 +32,13 @@ export default function Hero() {
             {/* H1 */}
             <div className="flex flex-col items-start justify-start">
               <RevealText
-                text="MBA STUDENT."
-                className="text-[11vw] md:text-[7rem] lg:text-[8rem] font-black tracking-[-0.08em] leading-[0.85] text-fg uppercase text-left"
+                text="ROBIN GAUTAM"
+                className="text-[10vw] md:text-[5.5rem] lg:text-[6.5rem] font-black tracking-[-0.06em] leading-[0.85] text-fg uppercase text-left"
                 delay={0}
               />
               <RevealText
-                text="Who Actually Ships."
-                className="text-[9vw] md:text-[5.5rem] lg:text-[6.5rem] font-black tracking-[-0.06em] leading-[0.85] font-serif italic text-fg text-left"
+                text="Strategy, Growth & Product."
+                className="text-[7vw] md:text-[3.5rem] lg:text-[4.5rem] tracking-[-0.04em] leading-[0.9] font-serif italic text-muted text-left mt-2"
                 delay={0.15}
               />
             </div>
@@ -51,27 +51,17 @@ export default function Hero() {
             >
               {/* Subheadline */}
               <p className="text-base md:text-lg text-muted leading-relaxed mb-8">
-                I'm the only person in my IIM cohort who also built and deployed three financial tools this year. MBA at IIM Rohtak. Founder at robingautam.in. I close the gap between strategy and execution.
+                MBA Candidate at IIM Rohtak. Previously led growth, content, and partnerships across internships in fintech, social impact, and media. I enjoy working at the intersection of business thinking and hands-on execution.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col items-start gap-4">
-                <div className="flex gap-6 items-center">
-                  <MagneticButton className="bg-fg text-bg px-10 py-5 rounded-full font-bold tracking-wide hover:scale-105 transition-transform duration-300">
-                    Get in Touch
-                  </MagneticButton>
-                  <button className="text-sm font-medium underline underline-offset-4 decoration-muted hover:decoration-fg transition-all">
-                    See My Work →
-                  </button>
-                </div>
-                <a
-                  href="https://robingautam.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-muted underline underline-offset-4 decoration-muted/50 hover:decoration-fg hover:text-fg transition-all tracking-wide"
-                >
-                  Visit robingautam.in ↗
-                </a>
+              <div className="flex gap-6 items-center">
+                <MagneticButton className="bg-fg text-bg px-10 py-5 rounded-full font-bold tracking-wide hover:scale-105 transition-transform duration-300">
+                  Get in Touch
+                </MagneticButton>
+                <button className="text-sm font-medium underline underline-offset-4 decoration-muted hover:decoration-fg transition-all">
+                  See My Work →
+                </button>
               </div>
             </motion.div>
           </div>
@@ -84,11 +74,8 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 1.2, ease: LUXURY_EASE }}
               className="relative w-[280px] h-[360px] md:w-[320px] md:h-[420px] lg:w-[360px] lg:h-[460px]"
             >
-              {/* Photo placeholder card */}
               <div className="w-full h-full rounded-2xl bg-bg shadow-2xl overflow-hidden relative flex items-center justify-center border border-fg/10">
-                {/* Dashed inset border */}
                 <div className="absolute inset-3 border border-dashed border-fg/15 rounded-xl pointer-events-none" />
-                {/* Label */}
                 <p className="text-fg/30 text-[10px] tracking-[0.3em] uppercase font-bold z-10">
                   portrait coming soon
                 </p>
@@ -98,7 +85,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats Grid - ALL WITH NUMBERS */}
+      {/* Stats Grid */}
       <div className="border-t border-black/10 mt-auto z-10 relative">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => (
@@ -110,7 +97,7 @@ export default function Hero() {
               transition={{ delay: 0.8 + i * 0.1, duration: 1, ease: LUXURY_EASE }}
               className={`py-8 md:py-12 pr-8 ${i !== stats.length - 1 ? 'md:border-r border-black/10' : ''}`}
             >
-              <h3 className="text-4xl md:text-6xl font-serif font-bold mb-2 tracking-tight">{stat.value}</h3>
+              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-2 tracking-tight">{stat.value}</h3>
               <p className="label-swiss text-[10px] md:text-xs tracking-widest opacity-60 uppercase">{stat.label}</p>
             </motion.div>
           ))}
