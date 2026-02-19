@@ -97,43 +97,49 @@ export default function Work() {
                                         />
                                     </div>
                                 ) : (
-                                    /* Finlatics — Styled Mockup Card (Option A) */
-                                    <div className="w-full h-full bg-fg/95 rounded-3xl flex flex-col items-center justify-center p-8 md:p-12 relative border-l-4 border-purple-500">
-                                        {/* Grain texture */}
-                                        <div
-                                            className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none rounded-3xl"
-                                            style={{
-                                                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
-                                                backgroundSize: "128px 128px",
-                                            }}
-                                        />
-                                        {/* Mockup document */}
-                                        <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/10 p-6 md:p-8 w-full max-w-sm z-10">
-                                            <div className="flex items-center gap-2 mb-6">
-                                                <div className="w-2 h-2 rounded-full bg-purple-400" />
-                                                <span className="text-[10px] text-white/40 tracking-[0.2em] uppercase font-mono">Finlatics</span>
+                                    /* Finlatics — CSS-Only Styled Card */
+                                    <div
+                                        className="w-full h-full rounded-3xl flex flex-col items-center justify-center p-8 md:p-12 relative overflow-hidden"
+                                        style={{ backgroundColor: "#1a1a2e" }}
+                                    >
+                                        {/* Top label */}
+                                        <p className="text-[10px] tracking-[0.25em] uppercase mb-8" style={{ color: "#a78bfa" }}>
+                                            Market Research · STP Analysis
+                                        </p>
+
+                                        {/* Large title */}
+                                        <h3 className="text-5xl md:text-6xl font-serif italic font-normal text-white mb-10">
+                                            Finlatics
+                                        </h3>
+
+                                        {/* Data rows */}
+                                        <div className="w-full max-w-xs space-y-3">
+                                            <div className="flex items-end justify-between gap-2">
+                                                <span className="text-xs shrink-0" style={{ color: "#9ca3af" }}>Segment Identified</span>
+                                                <span className="flex-1 border-b border-dotted border-white/20 mb-1 mx-1" />
+                                                <span className="text-xs font-mono text-white shrink-0">3 core clusters</span>
                                             </div>
-                                            <h4 className="text-white text-lg font-bold mb-4">STP Analysis Report</h4>
-                                            <div className="space-y-3">
-                                                <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                                                    <span className="text-white/50 text-xs">Segmentation</span>
-                                                    <span className="text-white/70 text-xs font-mono">4 clusters identified</span>
-                                                </div>
-                                                <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                                                    <span className="text-white/50 text-xs">Targeting</span>
-                                                    <span className="text-white/70 text-xs font-mono">Primary: Tier-2 finance</span>
-                                                </div>
-                                                <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                                                    <span className="text-white/50 text-xs">Positioning</span>
-                                                    <span className="text-white/70 text-xs font-mono">Defensible niche found</span>
-                                                </div>
-                                                <div className="flex justify-between items-center">
-                                                    <span className="text-white/50 text-xs">Status</span>
-                                                    <span className="text-green-400 text-xs font-mono">Delivered ✓</span>
-                                                </div>
+                                            <div className="flex items-end justify-between gap-2">
+                                                <span className="text-xs shrink-0" style={{ color: "#9ca3af" }}>Positioning Gap</span>
+                                                <span className="flex-1 border-b border-dotted border-white/20 mb-1 mx-1" />
+                                                <span className="text-xs font-mono text-white shrink-0">High (underserved)</span>
+                                            </div>
+                                            <div className="flex items-end justify-between gap-2">
+                                                <span className="text-xs shrink-0" style={{ color: "#9ca3af" }}>Recommended Channel</span>
+                                                <span className="flex-1 border-b border-dotted border-white/20 mb-1 mx-1" />
+                                                <span className="text-xs font-mono text-white shrink-0">D2C + Referral</span>
                                             </div>
                                         </div>
-                                        <p className="text-white/30 text-[10px] tracking-[0.2em] uppercase mt-6 z-10">Market Research & Segmentation</p>
+
+                                        {/* Bottom pill */}
+                                        <div className="mt-10">
+                                            <span
+                                                className="text-[10px] tracking-[0.15em] uppercase px-4 py-2 rounded-full border"
+                                                style={{ color: "#a78bfa", borderColor: "#a78bfa" }}
+                                            >
+                                                Consulting Project
+                                            </span>
+                                        </div>
                                     </div>
                                 )}
                             </a>

@@ -22,11 +22,11 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-32 px-6 md:px-12 bg-bg">
+        <section className="py-24 px-6 md:px-12 bg-bg">
             <div className="max-w-[1400px] mx-auto">
                 <span className="label-swiss block mb-12 text-center">What I Do</span>
 
-                <div className="text-center mb-24">
+                <div className="text-center mb-16">
                     <RevealText
                         text="Strategy, Systems,"
                         className="text-4xl md:text-6xl font-bold tracking-tighter"

@@ -8,7 +8,7 @@ export default function Hero() {
     { label: "Students onboarded during StockGro internship", value: "1,200+" },
     { label: "Financial tools built and deployed", value: "25+" },
     { label: "Brand sponsors secured for Riwaaz 2.0", value: "3+" },
-    { label: "Startup founded: robingautam.in", value: "1" },
+    { label: "Years building products & systems", value: "2+" },
   ];
 
   return (
@@ -84,25 +84,14 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 1.2, ease: LUXURY_EASE }}
               className="relative w-[280px] h-[360px] md:w-[320px] md:h-[420px] lg:w-[360px] lg:h-[460px]"
             >
-              {/* Card with grain texture */}
-              <div className="w-full h-full rounded-2xl bg-fg/90 flex items-center justify-center shadow-2xl overflow-hidden relative">
-                {/* Grain texture overlay */}
-                <div
-                  className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
-                    backgroundSize: "128px 128px",
-                  }}
-                />
-                {/* Instruction text */}
-                <div className="text-center z-10 px-8">
-                  <p className="text-bg/60 text-[10px] tracking-[0.3em] uppercase font-bold mb-2">
-                    Your Photo
-                  </p>
-                  <p className="text-bg/40 text-[9px] tracking-[0.2em] uppercase">
-                    Add your photo here
-                  </p>
-                </div>
+              {/* Photo placeholder card */}
+              <div className="w-full h-full rounded-2xl bg-bg shadow-2xl overflow-hidden relative flex items-center justify-center border border-fg/10">
+                {/* Dashed inset border */}
+                <div className="absolute inset-3 border border-dashed border-fg/15 rounded-xl pointer-events-none" />
+                {/* Label */}
+                <p className="text-fg/30 text-[10px] tracking-[0.3em] uppercase font-bold z-10">
+                  portrait coming soon
+                </p>
               </div>
             </motion.div>
           </div>
