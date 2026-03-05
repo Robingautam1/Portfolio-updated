@@ -47,11 +47,17 @@ const stats = [
 function StatItem({ value, suffix, label }: { value: number; suffix: string; label: string }) {
     const { count, ref } = useCountUp(value);
     return (
-        <div ref={ref} className="py-[52px] text-center">
-            <div className="text-[48px] font-extrabold text-[#0D0D0D] leading-none" style={{ fontFamily: "var(--font-sans)" }}>
+        <div ref={ref} className="py-8 md:py-12 text-center">
+            <div
+                className="text-[32px] md:text-[44px] font-extrabold text-[#0D0D0D] leading-none"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
                 {count.toLocaleString()}{suffix}
             </div>
-            <div className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890] mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+            <div
+                className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890] mt-2 leading-[1.5]"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
                 {label}
             </div>
         </div>
@@ -71,7 +77,7 @@ const fadeUp = {
 export default function HeroSection() {
     return (
         <section className="bg-[#F7F5F0] pt-[120px] pb-0">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
                 {/* ── Two-column grid ── */}
                 <motion.div
                     className="grid grid-cols-1 lg:grid-cols-[58%_42%] gap-12 lg:gap-8 items-start"
@@ -85,26 +91,29 @@ export default function HeroSection() {
                         <motion.div variants={fadeUp} className="mb-8">
                             <div className="flex items-end justify-between mb-2">
                                 <span />
-                                <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890]" style={{ fontFamily: "var(--font-sans)" }}>
+                                <span
+                                    className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890]"
+                                    style={{ fontFamily: "var(--font-sans)" }}
+                                >
                                     AVAILABLE FOR OPPORTUNITIES · 2026
                                 </span>
                             </div>
                             <hr className="divider" />
                         </motion.div>
 
-                        {/* Name */}
+                        {/* Name — Fix 2: 72px desktop, 40px mobile */}
                         <motion.h1
                             variants={fadeUp}
-                            className="text-[48px] sm:text-[64px] lg:text-[80px] font-extrabold uppercase leading-none tracking-[-0.02em] text-[#0D0D0D]"
+                            className="text-[40px] md:text-[72px] font-extrabold uppercase leading-none tracking-[-0.02em] text-[#0D0D0D]"
                             style={{ fontFamily: "var(--font-sans)" }}
                         >
                             ROBIN GAUTAM
                         </motion.h1>
 
-                        {/* Descriptor */}
+                        {/* Descriptor — Fix 2: 56px desktop, 36px mobile */}
                         <motion.p
                             variants={fadeUp}
-                            className="text-[36px] sm:text-[48px] lg:text-[64px] italic text-[#4A4A2A] leading-[1.1] mt-1"
+                            className="text-[36px] md:text-[56px] italic text-[#4A4A2A] leading-[1.1] mt-1"
                             style={{ fontFamily: "var(--font-serif)" }}
                         >
                             Strategy, Growth & Product.
@@ -153,19 +162,16 @@ export default function HeroSection() {
                         </motion.p>
                     </div>
 
-                    {/* ── Right Column — Photo placeholder ── */}
+                    {/* ── Right Column — Photo placeholder — Fix 8: max 480px ── */}
                     <motion.div variants={fadeUp} className="flex justify-center lg:justify-end lg:pt-8">
                         <div
-                            className="w-full max-w-[340px] bg-[#E8E4DB] rounded-[4px] flex items-center justify-center"
+                            className="w-full max-w-[340px] max-h-[480px] bg-[#E8E4DB] rounded-[4px] flex items-center justify-center"
                             style={{
                                 aspectRatio: "2/3",
                                 transform: "rotate(2deg)",
                             }}
                         >
-                            {/* Dashed inset border */}
-                            <div
-                                className="w-[calc(100%-24px)] h-[calc(100%-24px)] border border-dashed border-[#CCCAC3] rounded-[2px] flex items-center justify-center"
-                            >
+                            <div className="w-[calc(100%-24px)] h-[calc(100%-24px)] border border-dashed border-[#CCCAC3] rounded-[2px] flex items-center justify-center">
                                 <span
                                     className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#9E9890]"
                                     style={{ fontFamily: "var(--font-sans)" }}
@@ -177,13 +183,13 @@ export default function HeroSection() {
                     </motion.div>
                 </motion.div>
 
-                {/* ── Stats bar ── */}
+                {/* ── Stats bar — Fix 3: 48px top/bottom, Fix 4: labels wrap ── */}
                 <div className="mt-16 border-t border-[#DEDBD4]">
                     <div className="grid grid-cols-2 lg:grid-cols-4">
                         {stats.map((stat, i) => (
                             <div
                                 key={i}
-                                className={`${i > 0 ? "border-t lg:border-t-0 lg:border-l border-[#DEDBD4]" : ""}`}
+                                className={`min-w-0 ${i > 0 ? "border-t lg:border-t-0 lg:border-l border-[#DEDBD4]" : ""}`}
                             >
                                 <StatItem {...stat} />
                             </div>

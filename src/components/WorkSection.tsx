@@ -20,10 +20,9 @@ const projects = [
             "Zero-friction onboarding",
         ],
         tools: "NEXT.JS · TAILWIND · GAMIFICATION DESIGN",
-        link: "#",
+        link: "https://cash-curious.vercel.app",
         linkLabel: "View Project →",
-        cardBg: "#DEDBD4",
-        cardContent: null,
+        cardType: "cashcurious",
     },
     {
         type: "PERSONAL PROJECT · PEER RESOURCE",
@@ -37,10 +36,9 @@ const projects = [
             "Finance-specific inputs",
         ],
         tools: "NEXT.JS · JAVASCRIPT · FINANCIAL MODELLING",
-        link: "#",
+        link: "https://robingautam1.github.io/quantmaster-site/",
         linkLabel: "View Project →",
-        cardBg: "#DEDBD4",
-        cardContent: null,
+        cardType: "quantmaster",
     },
     {
         type: "LIVE PROJECT · FINLATICS PROGRAMME · 2025",
@@ -56,10 +54,67 @@ const projects = [
         tools: "MARKET RESEARCH · STP ANALYSIS · EXCEL",
         link: "#",
         linkLabel: "View Case Study →",
-        cardBg: "#2C2C24",
-        cardContent: "finlatics",
+        cardType: "finlatics",
     },
 ];
+
+/* ── Custom Cards for Fix 5 ── */
+
+function CashCuriousCard() {
+    return (
+        <div
+            className="w-full rounded-[4px] flex flex-col items-center justify-center p-8 text-center"
+            style={{ aspectRatio: "4/3", backgroundColor: "#1a3a2a" }}
+        >
+            <span
+                className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#8fa996]"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
+                FINANCIAL LITERACY PLATFORM
+            </span>
+            <h3
+                className="text-[48px] italic text-[#F7F5F0] mt-4"
+                style={{ fontFamily: "var(--font-serif)", fontWeight: 400 }}
+            >
+                CashCurious
+            </h3>
+            <p
+                className="text-[14px] text-[#A3B8A8] mt-3 max-w-[280px]"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
+                Making finance feel like a game.
+            </p>
+        </div>
+    );
+}
+
+function QuantMasterCard() {
+    return (
+        <div
+            className="w-full rounded-[4px] flex flex-col items-center justify-center p-8 text-center"
+            style={{ aspectRatio: "4/3", backgroundColor: "#1a1a2e" }}
+        >
+            <span
+                className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#8686a6]"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
+                25+ FINANCIAL CALCULATORS
+            </span>
+            <h3
+                className="text-[48px] italic text-[#F7F5F0] mt-4"
+                style={{ fontFamily: "var(--font-serif)", fontWeight: 400 }}
+            >
+                QuantMaster
+            </h3>
+            <p
+                className="text-[14px] text-[#9393B3] mt-3 max-w-[280px]"
+                style={{ fontFamily: "var(--font-sans)" }}
+            >
+                From NPV to statistics — all in one place.
+            </p>
+        </div>
+    );
+}
 
 function FinlaticsCard() {
     return (
@@ -102,22 +157,6 @@ function FinlaticsCard() {
     );
 }
 
-function PlaceholderCard({ bg }: { bg: string }) {
-    return (
-        <div
-            className="w-full rounded-[4px] flex items-center justify-center"
-            style={{ aspectRatio: "4/3", backgroundColor: bg }}
-        >
-            <span
-                className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#9E9890]"
-                style={{ fontFamily: "var(--font-sans)" }}
-            >
-                PREVIEW COMING SOON
-            </span>
-        </div>
-    );
-}
-
 function ProjectText({
     project,
 }: {
@@ -128,10 +167,11 @@ function ProjectText({
             <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#9E9890]" style={{ fontFamily: "var(--font-sans)" }}>
                 {project.type}
             </span>
-            <h3 className="text-[28px] font-bold text-[#0D0D0D] mt-3" style={{ fontFamily: "var(--font-sans)" }}>
+            {/* ── Heading size scaled ── */}
+            <h3 className="text-[28px] md:text-[36px] font-bold text-[#0D0D0D] mt-3 leading-[1.1]" style={{ fontFamily: "var(--font-sans)" }}>
                 {project.name}
             </h3>
-            <p className="text-[18px] italic text-[#6B6560] mt-1" style={{ fontFamily: "var(--font-serif)" }}>
+            <p className="text-[18px] md:text-[22px] italic text-[#6B6560] mt-1" style={{ fontFamily: "var(--font-serif)" }}>
                 {project.descriptor}
             </p>
             <p className="text-[15px] font-normal text-[#6B6560] leading-[1.75] mt-5" style={{ fontFamily: "var(--font-sans)" }}>
@@ -149,6 +189,8 @@ function ProjectText({
             </p>
             <a
                 href={project.link}
+                target={project.link !== "#" ? "_blank" : "_self"}
+                rel={project.link !== "#" ? "noopener noreferrer" : ""}
                 className="text-[13px] font-medium text-[#0D0D0D] underline underline-offset-[3px] mt-5 inline-block hover:text-[#4A4A2A] transition-colors"
                 style={{ fontFamily: "var(--font-sans)" }}
             >
@@ -160,8 +202,10 @@ function ProjectText({
 
 export default function WorkSection() {
     return (
-        <section id="work" className="bg-[#EDEAE3] py-[120px]">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
+        /* ── Fix 3: 96px/60px padding, Fix 7: Linen background ── */
+        <section id="work" className="bg-[#EDEAE3] py-[60px] md:py-[96px]">
+            {/* ── Fix 1: 48px/20px side padding ── */}
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
                 {/* ── Heading ── */}
                 <motion.div
                     initial="hidden"
@@ -171,10 +215,11 @@ export default function WorkSection() {
                     className="mb-4"
                 >
                     <span className="label-editorial">PERSONAL PROJECTS</span>
-                    <h2 className="heading-primary text-[36px] sm:text-[52px] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
+                    {/* ── Fix 2: 48px/32px heading, 44px/30px italic ── */}
+                    <h2 className="heading-primary text-[32px] md:text-[48px] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
                         Things I Built
                     </h2>
-                    <p className="heading-italic text-[34px] sm:text-[48px]" style={{ fontFamily: "var(--font-serif)" }}>
+                    <p className="heading-italic text-[30px] md:text-[44px]" style={{ fontFamily: "var(--font-serif)" }}>
                         on the Side.
                     </p>
                     <p className="text-[15px] text-[#6B6560] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
@@ -182,17 +227,17 @@ export default function WorkSection() {
                     </p>
                 </motion.div>
 
-                <hr className="divider my-12" />
+                {/* ── Fix 3: divider margin ── */}
+                <hr className="divider my-10 md:my-16" />
 
                 {/* ── Project rows ── */}
                 {projects.map((project, i) => {
                     const isReversed = i % 2 === 1;
-                    const visual =
-                        project.cardContent === "finlatics" ? (
-                            <FinlaticsCard />
-                        ) : (
-                            <PlaceholderCard bg={project.cardBg} />
-                        );
+
+                    let visual;
+                    if (project.cardType === "cashcurious") visual = <CashCuriousCard />;
+                    else if (project.cardType === "quantmaster") visual = <QuantMasterCard />;
+                    else visual = <FinlaticsCard />;
 
                     return (
                         <motion.div
@@ -201,7 +246,7 @@ export default function WorkSection() {
                             whileInView="visible"
                             viewport={{ once: true, margin: "-60px" }}
                             variants={fadeUp}
-                            className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[4%] ${i > 0 ? "mt-20" : ""
+                            className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[4%] ${i > 0 ? "mt-16 md:mt-24" : ""
                                 } ${isReversed ? "lg:direction-rtl" : ""}`}
                         >
                             <div className={`${isReversed ? "lg:order-2" : "lg:order-1"}`}>

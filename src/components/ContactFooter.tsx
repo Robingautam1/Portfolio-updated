@@ -10,13 +10,13 @@ const fadeUp = {
 const sideLinks = [
     { label: "LinkedIn ↗", href: "#" },
     { label: "Resume ↗", href: "#" },
-    { label: "robingautam.in ↗", href: "https://robingautam.in" },
+    { label: "robingautam.in ↗", href: "https://robingautam.in/" },
 ];
 
 export default function ContactFooter() {
     return (
-        <section id="contact" className="bg-[#F7F5F0] pt-[120px] pb-0">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
+        <section id="contact" className="bg-[#F7F5F0] pt-[60px] md:pt-[96px] pb-0">
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
                 {/* ── Contact area ── */}
                 <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-16">
                     {/* Left */}
@@ -26,19 +26,19 @@ export default function ContactFooter() {
                         viewport={{ once: true, margin: "-80px" }}
                         variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
                     >
-                        <motion.span variants={fadeUp} className="label-editorial">
+                        <motion.span variants={fadeUp} className="label-editorial block mb-4">
                             CONTACT
                         </motion.span>
                         <motion.h2
                             variants={fadeUp}
-                            className="heading-primary text-[36px] sm:text-[52px] mt-4"
+                            className="heading-primary text-[32px] md:text-[48px]"
                             style={{ fontFamily: "var(--font-sans)" }}
                         >
                             Open to
                         </motion.h2>
                         <motion.p
                             variants={fadeUp}
-                            className="heading-italic text-[34px] sm:text-[48px]"
+                            className="heading-italic text-[30px] md:text-[44px]"
                             style={{ fontFamily: "var(--font-serif)" }}
                         >
                             the Right Opportunity.
@@ -88,17 +88,17 @@ export default function ContactFooter() {
                 </div>
 
                 {/* ── Footer bar ── */}
-                <div className="border-t border-[#DEDBD4] mt-[120px] py-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                <div className="border-t border-[#DEDBD4] mt-[60px] md:mt-[96px] py-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 text-center sm:text-left">
                         <span
-                            className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890] sm:text-left"
+                            className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890]"
                             style={{ fontFamily: "var(--font-sans)" }}
                         >
                             BASED IN INDIA. WORKING GLOBALLY.
                         </span>
                         <a
                             href="mailto:robin@robingautam.in"
-                            className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890] no-underline hover:text-[#4A4A2A] transition-colors"
+                            className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890] no-underline hover:text-[#4A4A2A] transition-colors sm:text-center block"
                             style={{ fontFamily: "var(--font-sans)" }}
                         >
                             robin@robingautam.in

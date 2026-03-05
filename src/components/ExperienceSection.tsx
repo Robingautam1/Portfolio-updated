@@ -68,21 +68,21 @@ const experiences = [
 
 export default function ExperienceSection() {
     return (
-        <section id="experience" className="bg-[#F7F5F0] py-[120px]">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
-                {/* ── Section heading ── */}
+        <section id="experience" className="bg-[#F7F5F0] py-[60px] md:py-[96px]">
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
+                {/* ── Section heading — Fix 6: label 16px above heading, 48px margin-bottom ── */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-80px" }}
                     variants={fadeUp}
-                    className="mb-8"
+                    className="mb-12"
                 >
-                    <span className="label-editorial">EXPERIENCE</span>
-                    <h2 className="heading-primary text-[36px] sm:text-[52px] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
+                    <span className="label-editorial block mb-4">EXPERIENCE</span>
+                    <h2 className="heading-primary text-[32px] md:text-[48px]" style={{ fontFamily: "var(--font-sans)" }}>
                         Where Strategy
                     </h2>
-                    <p className="heading-italic text-[34px] sm:text-[48px]" style={{ fontFamily: "var(--font-serif)" }}>
+                    <p className="heading-italic text-[30px] md:text-[44px]" style={{ fontFamily: "var(--font-serif)" }}>
                         Met Execution.
                     </p>
                 </motion.div>
@@ -105,7 +105,7 @@ export default function ExperienceSection() {
                                 <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890]" style={{ fontFamily: "var(--font-sans)" }}>
                                     {exp.date}
                                 </span>
-                                <div className="text-[20px] font-semibold text-[#0D0D0D] mt-2 leading-tight" style={{ fontFamily: "var(--font-sans)" }}>
+                                <div className="text-[18px] md:text-[20px] font-semibold text-[#0D0D0D] mt-2 leading-tight" style={{ fontFamily: "var(--font-sans)" }}>
                                     {exp.role}
                                 </div>
                                 <div className="text-[16px] italic text-[#6B6560] mt-1" style={{ fontFamily: "var(--font-serif)" }}>
@@ -133,18 +133,18 @@ export default function ExperienceSection() {
                                 </p>
                             </div>
 
-                            {/* Col 4 — Outcome */}
+                            {/* Col 4 — Outcome — Fix 2: 20px desktop */}
                             <div>
                                 <span className="text-[9px] font-medium uppercase tracking-[0.16em] text-[#9E9890]" style={{ fontFamily: "var(--font-sans)" }}>
                                     OUTCOME
                                 </span>
-                                <p className="text-[20px] font-semibold text-[#0D0D0D] leading-[1.4] mt-[10px]" style={{ fontFamily: "var(--font-sans)" }}>
+                                <p className="text-[18px] md:text-[20px] font-semibold text-[#0D0D0D] leading-[1.4] mt-[10px]" style={{ fontFamily: "var(--font-sans)" }}>
                                     {exp.outcome}
                                 </p>
                             </div>
                         </div>
 
-                        {/* Mobile: Role + Outcome only */}
+                        {/* Mobile: Role + Outcome only — Fix 2: 18px mobile */}
                         <div className="md:hidden py-10 border-b border-[#DEDBD4]">
                             <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9E9890]" style={{ fontFamily: "var(--font-sans)" }}>
                                 {exp.date}
@@ -156,7 +156,7 @@ export default function ExperienceSection() {
                                 {exp.org}
                             </div>
                             <hr className="divider my-4" />
-                            <p className="text-[16px] font-semibold text-[#0D0D0D] leading-[1.4]" style={{ fontFamily: "var(--font-sans)" }}>
+                            <p className="text-[18px] font-semibold text-[#0D0D0D] leading-[1.4]" style={{ fontFamily: "var(--font-sans)" }}>
                                 {exp.outcome}
                             </p>
                         </div>

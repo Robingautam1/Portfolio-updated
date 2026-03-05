@@ -24,8 +24,8 @@ const columns = [
 
 export default function ToolkitSection() {
     return (
-        <section className="bg-[#F7F5F0] py-[120px]">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
+        <section className="bg-[#F7F5F0] py-[60px] md:py-[96px]">
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
                 {/* ── Header row ── */}
                 <motion.div
                     initial="hidden"
@@ -36,10 +36,10 @@ export default function ToolkitSection() {
                 >
                     <div>
                         <span className="label-editorial">TOOLKIT</span>
-                        <h2 className="heading-primary text-[36px] sm:text-[48px] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
+                        <h2 className="heading-primary text-[32px] md:text-[48px] mt-4" style={{ fontFamily: "var(--font-sans)" }}>
                             Tools Behind
                         </h2>
-                        <p className="heading-italic-accent text-[32px] sm:text-[44px]" style={{ fontFamily: "var(--font-serif)" }}>
+                        <p className="heading-italic-accent text-[30px] md:text-[44px]" style={{ fontFamily: "var(--font-serif)" }}>
                             the Systems.
                         </p>
                     </div>
@@ -65,7 +65,7 @@ export default function ToolkitSection() {
                         <motion.div
                             key={ci}
                             variants={fadeUp}
-                            className={`${ci > 0 ? "md:border-l border-[#DEDBD4]" : ""} md:px-6 first:md:pl-0 last:md:pr-0 py-8`}
+                            className={`${ci > 0 ? "md:border-l border-[#DEDBD4]" : ""} md:px-8 first:md:pl-0 last:md:pr-0 py-8`}
                         >
                             <span className="label-editorial">{col.label}</span>
                             <hr className="divider mt-5" />

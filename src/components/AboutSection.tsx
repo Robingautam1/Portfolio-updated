@@ -9,8 +9,8 @@ const fadeUp = {
 
 export default function AboutSection() {
     return (
-        <section id="about" className="bg-[#EDEAE3] py-[120px] md:py-[120px]">
-            <div className="max-w-[1160px] mx-auto px-6 md:px-12">
+        <section id="about" className="bg-[#EDEAE3] py-[60px] md:py-[96px]">
+            <div className="max-w-[1160px] mx-auto px-5 md:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-12 lg:gap-16">
                     {/* ── Left — Heading ── */}
                     <motion.div
@@ -21,13 +21,13 @@ export default function AboutSection() {
                     >
                         <span className="label-editorial">ABOUT</span>
                         <h2
-                            className="heading-primary text-[36px] sm:text-[48px] mt-4"
+                            className="heading-primary text-[32px] md:text-[48px] mt-4"
                             style={{ fontFamily: "var(--font-sans)" }}
                         >
                             Background &
                         </h2>
                         <p
-                            className="heading-italic text-[32px] sm:text-[44px]"
+                            className="heading-italic text-[30px] md:text-[44px]"
                             style={{ fontFamily: "var(--font-serif)" }}
                         >
                             What I&rsquo;m Looking For.
